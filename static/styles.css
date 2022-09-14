@@ -1,0 +1,155 @@
+:root {
+    --dark-blue: #005073;
+    --light-grey: #eeeeee;
+    --light-blue: #c0cbd3;
+    --dark-grey: #333333;
+    --pink: #ea3c53;
+    --light-pink: #f1c9ce;
+}
+
+.content, .error-bar {
+    margin: 50px;
+}
+
+header {
+    background-color: var(--dark-blue);
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    padding: 20px 0;
+    z-index: 1;
+    top: 0;
+    left: 0;
+}
+
+header h1 {
+    color: var(--light-grey);
+    padding: 6px 12px;
+    border: 4px solid var(--light-grey);
+    display: inline-block;
+    font-size: 25px;
+    border-radius: 36px;
+}
+
+.banner {
+    position: relative;
+    top:89px;
+    margin: 0px;
+}
+
+.banner img {
+    width: 100%;
+}
+
+.banner .welcome {
+    color: var(--light-grey);
+    position: absolute;
+    bottom: 45%;
+    right: 12%;
+}
+
+.banner h2 {
+    font-size: 30px;
+}
+
+.nav {
+    background-color: var(--light-blue);
+    padding: 15px;
+    margin: 89px 0 0 0;
+    position: sticky;
+    top: 89px;
+    z-index: 1;
+}
+
+a.nav-link {
+    color: var(--dark-blue);
+    font-weight: 600;
+}
+
+h6 {
+    color: var(--dark-grey);
+}
+
+form.init-interface {
+    width: 500px;
+    margin: auto;
+    padding: 50px;
+    border-radius: 60px;
+    background-color: var(--light-pink);
+}
+
+button.btn-init-interface {
+    background-color: var(--dark-blue);
+    border-color: var(--dark-blue);
+    color: white;
+    width: 400px;
+    border-radius: 24px;
+}
+
+button.btn-success {
+    background-color: var(--dark-blue);
+    border-color: var(--dark-blue);
+    color: white;
+    width: 200px;
+    border-radius: 24px;
+}
+
+button.btn-init-interface:hover {
+    background-color: var(--light-blue);
+    border-color: var(--light-blue);
+    color: var(--dark-grey);
+}
+
+button.btn-success:hover {
+    background-color: var(--light-blue);
+    border-color: var(--light-blue);
+    color: var(--dark-grey);
+}
+
+button.btn-init-interface:focus {
+    box-shadow: none;
+    outline: none;
+}
+
+button.btn-success:focus {
+    box-shadow: none;
+    outline: none;
+}
+
+input.form-control {
+    width: 400px;
+    border: 2px solid var(--light-blue);
+    border-radius: 24px;
+}
+
+input.form-control:focus {
+    border: 2px solid var(--dark-blue);
+    outline: none;
+    box-shadow: none;
+}
+
+input.form-check-input:checked {
+    background-color: var(--dark-blue);
+}
+
+.graph {
+    width: 50%;
+    margin: 0 auto;
+}
+
+button.accordion-button:not(.collapsed) {
+    color: var(--dark-grey);
+    background-color: var(--light-grey);
+}
+
+button.accordion-button:focus {
+    box-shadow: none;
+}
+
+footer {
+    background-color: var(--dark-blue);
+    color: var(--light-grey);
+    text-align: center;
+    width: 100%;
+    padding: 20px 0;
+}

@@ -1,0 +1,35 @@
+{% extends "layout2.html" %}
+
+{% block body %}
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Stock</th>
+        <th scope="col">Company</th>
+        <th scope="col">Shares</th>
+        <th scope="col">Value</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for row in stock_data %}
+        <tr>
+          <th scope="row">{{row[0]}}</th>
+          {% for i in range(1, num_cols) %}
+            <td>{{row[i]}}</td>
+          {% endfor %}
+        </tr>
+      {% endfor %}
+      <!-- <tr>
+        <th scope="row">2</th>
+        <td>Jacob</td>
+        <td>Thornton</td>
+        <td>@fat</td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td colspan="2">Larry the Bird</td>
+        <td>@twitter</td>
+      </tr> -->
+    </tbody>
+  </table>
+{% endblock %}

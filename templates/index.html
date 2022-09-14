@@ -1,0 +1,63 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<h6>A new platform for young leaders to learn about investing.</h6>
+<br>
+<div class="accordion" id="accordionExample">
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingOne">
+        <button class="accordion-button collapsed" id="btn1" onclick="accordian_clicked(1)" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            Supplemented by real data
+        </button>
+      </h2>
+      <div id="collapse1" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          IEX, a global leader in stock market data, lays the backbone of this service. It supplies live stock data and allows users to effectlively interact with the real market. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingTwo">
+        <button class="accordion-button collapsed" id="btn2" onclick="accordian_clicked(2)" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          Anyone can sign up!
+        </button>
+      </h2>
+      <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          Head over to our sign up page to register and you can get started right away. You'll be given $10000 to begin your investing career. You can upgrade for free when you're ready to handle more money. Have fun! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingThree">
+        <button class="accordion-button collapsed" id="btn3" onclick="accordian_clicked(3)" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          Free forever
+        </button>
+      </h2>
+      <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          Finance360 will never cost a thing. We believe learning is a fundamental right and work hard to provide this opportunity to you for free: everyday and anytime. We hope you enjoy using our service. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function accordian_clicked(num) {
+      var x = document.getElementById("btn" + num.toString());
+      if (x.className.indexOf("collapsed") == -1) {
+        x.className += " collapsed";
+      } else {
+        x.className = x.className.replace(" collapsed", "");
+      }
+
+      var y = document.getElementById("collapse" + num.toString());
+      if (y.className.indexOf("show") == -1) {
+        y.className += " show";
+      }
+      else {
+        y.className = y.className.replace(" show", "");
+      }
+    }
+  </script>
+{% endblock %}

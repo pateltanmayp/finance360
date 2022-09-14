@@ -1,0 +1,46 @@
+{% extends "layout2.html" %}
+
+{% block body %}
+<form action="/quote" method="post">
+    <div class="row g-3 align-items-center">
+        <div class="col-auto">
+            <label for="stock" class="col-form-label">Stock Code</label>
+        </div>
+        <div class="col-auto">
+            <input type="text" id="stock" name="stock" class="form-control">
+        </div>
+        <div class="col-auto">
+            <button type="submit" class="btn btn-success">Get Quote</button></a>
+        </div>
+        <div class="col-auto">
+            <span>
+                {% if quote == None %}
+                    Please select a stock
+                {% else %}
+                    Current price for {{company}}: ${{quote}}
+                {% endif %}
+            </span>
+        </div>
+    </div>
+</form>
+<br>
+<div id="myPlot" class="graph centre" style="width:100%;max-width:700px"></div>
+
+<script>
+    const xValues = [];
+    const yValues = {{y_vals}};
+    for (let x = 1; x <= yValues.length; x += 1) {
+      xValues.push(x);
+    }
+    
+    const data = [{
+      x: xValues,
+      y: yValues,
+      mode:"lines"
+    }];
+    
+    const layout = {title: "Trend"};
+    Plotly.newPlot("myPlot", data, layout);
+    </script>
+    
+{% endblock %}

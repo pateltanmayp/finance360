@@ -1,0 +1,23 @@
+{% extends "layout2.html" %}
+
+{% block body %}
+<form action="/sell" method="post">
+    <div class="row g-3 align-items-center">
+        <div class="col-auto">
+            <label for="stock" class="col-form-label">Stock Code</label>
+        </div>
+        <div class="col-auto">
+            <input type="text" id="stock" name="stock" class="form-control">
+        </div>
+        <div class="col-auto">
+            <label for="num_shares" class="col-form-label">Number of Shares</label>
+        </div>
+        <div class="col-auto">
+            <input type="number" id="num_shares" name="num_shares" class="form-control">
+        </div>
+        <div class="col-auto">
+            <button type="submit" class="btn btn-success">Sell</button></a>
+        </div>
+    </div>
+</form>
+{% endblock %}
